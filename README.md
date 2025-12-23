@@ -109,3 +109,9 @@ Limited training data affects generalization
 Slide 14 – Conclusion
 
 The project demonstrates that deep learning–based U-Net segmentation can effectively detect industrial steel surface defects. Both quantitative metrics and qualitative results confirm the suitability of this approach for automated industrial inspection.
+
+References
+
+Bergmann et al., The MVTec Anomaly Detection Dataset, IJCV 2021
+
+Ronneberger et al., U-Net: Convolutional Networks for Biomedical Image Segmentation, MICCAI 2015
