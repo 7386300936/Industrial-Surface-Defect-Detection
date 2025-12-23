@@ -42,11 +42,59 @@ Inclusions (small, isolated)
 
 Patches / Corrosion (large, irregular)
 
-Slide 6 – Related Work / Paper Discussion
+
+Slide 6 – From Dataset to Developed System
+🟦 Dataset (Input)
+
+Severstal Steel Defect Detection Dataset
+
+Raw steel surface images
+
+Pixel-level annotations in Run-Length Encoding (RLE) format
+
+Multiple defect categories:
+
+Cracks / Scratches
+
+Inclusions
+
+Patches / Corrosion
+
+Real-world, unprocessed industrial data
+
+No ready-to-use segmentation masks
+
+🟩 Developed System (Output)
+
+What I Developed from the Dataset
+
+RLE decoding to generate binary defect masks
+
+Image preprocessing and normalization pipeline
+
+U-Net–based deep learning segmentation model
+
+Pixel-level localization of surface defects
+
+Quantitative evaluation using IoU and Dice metrics
+
+Color-coded visualization of defect regions
+
+Red – Cracks / Scratches
+
+Blue – Inclusions
+
+Yellow – Patches / Corrosion
+
+➜ Key Insight (Optional line at bottom of slide)
+
+The dataset provides raw images and annotations, while the developed system transforms them into accurate, interpretable pixel-level defect segmentation results.
+
+Slide 7 – Related Work / Paper Discussion
 
 This project is inspired by Bergmann et al. (IJCV 2021) on industrial anomaly detection. The paper emphasizes pixel-level defect localization and motivates the use of deep learning segmentation models such as U-Net for industrial inspection tasks.
 
-Slide 7 – Methodology
+Slide 8 – Methodology
 
 Workflow:
 
@@ -54,15 +102,15 @@ Input Image → Preprocessing → U-Net Segmentation → Defect Mask → Evaluat
 
 The dataset images are preprocessed and their RLE annotations are decoded to generate defect masks. A U-Net model is trained to predict pixel-wise defect regions.
 
-Slide 8 – Network Architecture (U-Net)
+Slide 9 – Network Architecture (U-Net)
 
 U-Net is an encoder–decoder convolutional neural network with skip connections. The encoder extracts hierarchical features, while the decoder reconstructs high-resolution segmentation maps. Skip connections preserve spatial information, making U-Net effective for thin and small defects.
 
-Slide 9 – System Working (Detailed Flow)
+Slide 10 – System Working (Detailed Flow)
 
 The input image passes through the encoder to extract features. The decoder upsamples these features back to the original resolution. Skip connections help recover fine boundaries. The final output is a pixel-level defect mask aligned with the original image.
 
-Slide 10 – Results (Quantitative Metrics)
+Slide 11 – Results (Quantitative Metrics)
 
 Model performance is evaluated using:
 
@@ -72,7 +120,7 @@ Dice Coefficient
 
 Dice scores are generally higher than IoU due to the sparse and small nature of defect regions. Metric distributions are analyzed using plots.
 
-Slide 11 – Results (Qualitative Visualization)
+Slide 12 – Results (Qualitative Visualization)
 
 Original steel images are visualized with color-coded defect regions:
 
@@ -84,7 +132,7 @@ Yellow – Patches / Corrosion
 
 This visualization improves interpretability and helps identify correct detections and failure cases.
 
-Slide 12 – Observations
+Slide 13 – Observations
 
 Most defects occupy small pixel areas
 
@@ -94,7 +142,7 @@ Dice is more suitable than IoU for sparse defects
 
 Visual inspection complements quantitative metrics
 
-Slide 13 – Problems / Limitations
+Slide 14 – Problems / Limitations
 
 Severe class imbalance
 
@@ -106,7 +154,7 @@ Sensitivity to threshold selection
 
 Limited training data affects generalization
 
-Slide 14 – Conclusion
+Slide 15 – Conclusion
 
 The project demonstrates that deep learning–based U-Net segmentation can effectively detect industrial steel surface defects. Both quantitative metrics and qualitative results confirm the suitability of this approach for automated industrial inspection.
 
