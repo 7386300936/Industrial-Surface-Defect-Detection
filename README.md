@@ -42,7 +42,13 @@ Inclusions (small, isolated)
 
 Patches / Corrosion (large, irregular)
 
+<<<<<<< HEAD
 Slide 6 – From Dataset to Developed System 🟦 Dataset (Input)
+=======
+
+Slide 6 – From Dataset to Developed System
+🟦 Dataset (Input)
+>>>>>>> 9a88a7b76f9f36adce94200ccedff83fa51f5c00
 
 Severstal Steel Defect Detection Dataset
 
@@ -160,4 +166,8 @@ References
 
 Bergmann et al., The MVTec Anomaly Detection Dataset, IJCV 2021
 
+<<<<<<< HEAD
 Ronneberger et al., U-Net: Convolutional Networks for Biomedical Image Segmentation, MICCAI 2015
+=======
+Ronneberger et al., U-Net: Convolutional Networks for Biomedical Image Segmentation, MICCAI 2015
+>>>>>>> 9a88a7b76f9f36adce94200ccedff83fa51f5c00
